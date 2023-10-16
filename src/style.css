@@ -12,6 +12,11 @@
     font-style: normal;
 }
 
+:root {
+    --light-color: #bbe4e9;
+    --dark-color: #79c2d0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +24,7 @@
 
 #content {
     height: 100vh;
-    background-color: lightblue;
+    background-color: var(--light-color);
     display: grid;
     grid-template-rows: 60px 1fr 30px;
 }
@@ -61,7 +66,7 @@ p {
 }
 
 .footer {
-    background-color: darkcyan;
+    background-color: var(--dark-color);
     display: flex; 
     justify-content: center;
     align-items: center;
