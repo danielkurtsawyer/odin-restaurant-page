@@ -18,7 +18,38 @@ export default function pageLoad() {
     // add the header text to the header
     const headerText = document.createElement('div');
     headerText.textContent = 'Thai Gourmet Food Truck';
+    headerText.classList.add('headerText');
     header.appendChild(headerText);
+
+    // create the home, menu, and contact buttons
+    const homeButton = document.createElement('button');
+    homeButton.textContent = 'Home';
+
+    const menuButton = document.createElement('button');
+    menuButton.textContent = 'Menu';
+
+    const contactButton = document.createElement('button');
+    contactButton.textContent = 'Contact';
+
+    // add event listeners that toggle a hover class on the buttons 
+    homeButton.addEventListener('mouseover', () => homeButton.classList.add('hover'));
+    homeButton.addEventListener('mouseout', () => homeButton.classList.remove('hover'));
+    menuButton.addEventListener('mouseover', () => menuButton.classList.add('hover'));
+    menuButton.addEventListener('mouseout', () => menuButton.classList.remove('hover'));
+    contactButton.addEventListener('mouseover', () => contactButton.classList.add('hover'));
+    contactButton.addEventListener('mouseout', () => contactButton.classList.remove('hover'));
+
+    // create a container to hold the buttons
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('buttonContainer');
+
+    // add the buttons to the container
+    buttonContainer.appendChild(homeButton);
+    buttonContainer.appendChild(menuButton);
+    buttonContainer.appendChild(contactButton);
+
+    // add the button container to the header
+    header.appendChild(buttonContainer);
 
     // add the header to the general content div
     content.appendChild(header);
