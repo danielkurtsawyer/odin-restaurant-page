@@ -1,5 +1,7 @@
 import Logo from './thai-gourmet-logo.png';
-import Truck from './thai-gourmet-food-truck.jpeg';
+import menuPageLoad from './menuPageLoad.js';
+import contactPageLoad from './contactPageLoad.js';
+import homePageLoad from './homePageLoad.js';
 
 export default function pageLoad() {
     const content = document.querySelector('#content');
@@ -24,12 +26,15 @@ export default function pageLoad() {
     // create the home, menu, and contact buttons
     const homeButton = document.createElement('button');
     homeButton.textContent = 'Home';
+    homeButton.classList.add('home');
 
     const menuButton = document.createElement('button');
     menuButton.textContent = 'Menu';
+    menuButton.classList.add('menu');
 
     const contactButton = document.createElement('button');
     contactButton.textContent = 'Contact';
+    contactButton.classList.add('contact');
 
     // add event listeners that toggle a hover class on the buttons 
     homeButton.addEventListener('mouseover', () => homeButton.classList.add('hover'));
@@ -38,6 +43,11 @@ export default function pageLoad() {
     menuButton.addEventListener('mouseout', () => menuButton.classList.remove('hover'));
     contactButton.addEventListener('mouseover', () => contactButton.classList.add('hover'));
     contactButton.addEventListener('mouseout', () => contactButton.classList.remove('hover'));
+
+    // also add event listeners to dynamically render the webpage sites
+    homeButton.addEventListener('click', homePageLoad);
+    menuButton.addEventListener('click', menuPageLoad);
+    contactButton.addEventListener('click', contactPageLoad);
 
     // create a container to hold the buttons
     const buttonContainer = document.createElement('div');
@@ -57,19 +67,10 @@ export default function pageLoad() {
     // create a container div to hold the main content of the page
     const main = document.createElement('div');
     main.classList.add('main');
-
-    // add the image of the food truck to the container
-    const truckImage = new Image();
-    truckImage.src = Truck;
-    main.appendChild(truckImage);
-
-    // add the copy text to the container
-    const copy = document.createElement('p');
-    copy.textContent = 'This is my absolute favorite place to get quick, affordable, and delicious Thai food in Oakland. 5/5 stars! Would highly reccomend! - Dan';
-    main.appendChild(copy);
-
-    // add the container div to the general content div
     content.appendChild(main);
+
+    // load the main content of the home page using the homePageLoad module
+    homePageLoad();
 
     // create the footer div and add relevent children elements
     const footer = document.createElement('div');

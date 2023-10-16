@@ -91,6 +91,30 @@ p {
     
 }
 
+.buffer{
+    padding: 48px;
+    height: 100%;
+}
+
+.contactCard {
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    border: 2px solid var(--dark-color);
+    border-radius: 12px;
+}
+
+.contactCard div:first-child{
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .footer {
     background-color: var(--dark-color);
     display: flex; 
