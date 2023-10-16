@@ -16,17 +16,25 @@ export default function contactPageLoad() {
     // create the contact header and add it to the contact card
     const contactHeader = document.createElement('div');
     contactHeader.textContent = 'Contact Us';
+    contactHeader.classList.add('contactHeader');
     contactCard.appendChild(contactHeader);
 
-    // create the phone number div and add it to the contact card
+    // create a container to hold the contact information
+    const contactInfo = document.createElement('div');
+    contactInfo.classList.add('contactInfo');
+
+    // create the phone number div and add it to the contact info div
     const contactNumber = document.createElement('div');
     contactNumber.textContent = '(412)-681-4373';
-    contactCard.appendChild(contactNumber);
+    contactInfo.appendChild(contactNumber);
 
-    // create the email div and add it to the contact card
+    // create the email div and add it to the contact info div
     const contactEmail = document.createElement('div');
     contactEmail.textContent = 'thaigourmetpgh@gmail.com';
-    contactCard.appendChild(contactEmail);
+    contactInfo.appendChild(contactEmail);
+
+    // add the content info div to the content card
+    contactCard.appendChild(contactInfo);
 
     // add the content card to the buffer div
     buffer.appendChild(contactCard);

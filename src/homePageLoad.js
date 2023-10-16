@@ -13,6 +13,6 @@ export default function homePageLoad() {
 
     // add the copy text to the container
     const copy = document.createElement('p');
-    copy.textContent = 'This is my absolute favorite place to get quick, affordable, and delicious Thai food in Oakland. 5/5 stars! Would highly reccomend! - Dan';
+    copy.textContent = 'This is my absolute favorite place to get quick, affordable, and delicious Thai food in Oakland. 5/5 stars! Would highly recommend! - Dan';
     main.appendChild(copy);
 }

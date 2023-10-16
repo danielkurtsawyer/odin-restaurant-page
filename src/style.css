@@ -24,11 +24,11 @@
 }
 
 #content {
-    height: 100vh;
-    width: max(100vw, 600px);
+    min-height: max(100vh,350px);
+    min-width: max(100vw, 745px);
     background-color: var(--light-color);
     display: grid;
-    grid-template-rows: 60px 1fr 30px;
+    grid-template-rows: 75px 1fr 30px;
 }
 
 .header {
@@ -37,7 +37,7 @@
     align-items: center;
     gap: 12px;
     font-family: 'HeaderFont';
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .logo {
@@ -97,12 +97,13 @@ p {
 }
 
 .contactCard {
-    height: 50%;
-    width: 50%;
+    height: max(50%, 200px);
+    width: max(50%,200px);
     margin: auto;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    row-gap: 12px;
     align-items: center;
 
     background-color: white;
@@ -110,9 +111,49 @@ p {
     border-radius: 12px;
 }
 
-.contactCard div:first-child{
-    font-size: 24px;
+.contactHeader{
+    font-size: 32px;
     font-weight: bold;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.contactInfo {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuHeader {
+    margin: auto;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.foodContainer{
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 24px;
+    justify-content: center;
+}
+
+.item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    display: flex; 
+    flex-direction: column;
+    gap: 6px;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 1px solid var(--dark-color);
 }
 
 .footer {
