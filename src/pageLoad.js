@@ -4,18 +4,23 @@ import Truck from './thai-gourmet-food-truck.jpeg';
 export default function pageLoad() {
     const content = document.querySelector('#content');
 
+    // create the header div
+
     const header = document.createElement('div');
     header.classList.add('header');
 
+    // add the logo image to the header
     const logo = new Image();
     logo.src = Logo;
     logo.classList.add('logo');
     header.appendChild(logo);
     
+    // add the header text to the header
     const headerText = document.createElement('div');
     headerText.textContent = 'Thai Gourmet Food Truck';
-
     header.appendChild(headerText);
+
+    // add the header to the content div
     content.appendChild(header);
 
     const main = document.createElement('div');
