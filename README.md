@@ -8,4 +8,4 @@ I used the style-loader and css-loader to inject my source css into the index.ht
 
 A live preview of this site can be found here: https://danielkurtsawyer.github.io/odin-restaurant-page/.
 
-I'd like to dedicate this project to my friend Tim, the owner of the restaurant, for his kindness and continued friendship, not to mention all of the delicious food I have enjoyed by the hands of him and his wife's cooking.
+I'd like to dedicate this project to my friend Tim, the owner of the restaurant, for his kindness and continued friendship, not to mention all of the delicious food I have enjoyed at his food truck over the years.
